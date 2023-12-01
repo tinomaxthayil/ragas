@@ -1,0 +1,26 @@
+{
+    "inputs": [
+        "{ \"name\": \"John Doe\", age: 30, \"city\": \"New York\" }",
+        "[ { \"item1\": \"value1\", \"item2\": \"value2\", }",
+        "{ \"employees\": [ \"John\", \"Anna\", \"Peter\" }",
+        "{ \"color\": \"red\", \"value\": \"#f00\", \"code\": 255 }",
+        "{ \"data\": [{ \"id\": 1, \"name\": \"John\" }, { \"id\": 2, \"name\": \"Anna\", }] }",
+        "{ \"items\": [\"apple\", \"banana\", \"cherry\" \"date\"] }",
+        "{ \"settings\": { \"brightness\": 50, \"mode\": \"night\", \"volume\": }",
+        "{ \"user\": {\"name\": \"Alice\", \"age\": \"25\", \"email\": \"alice#example.com\"} }",
+        "[ { \"type\": \"fruit\", \"examples\": [\"apple\", \"banana\", \"cherry\"], \"available\": true, ] }",
+        "{ \"id\": 123 \"name\": \"Widget\", \"price\": 19.99 }"
+    ],
+    "targets": [
+        "{ \"name\": \"John Doe\", \"age\": 30, \"city\": \"New York\" }",
+        "[ { \"item1\": \"value1\", \"item2\": \"value2\" } ]",
+        "{ \"employees\": [ \"John\", \"Anna\", \"Peter\" ] }",
+        "{ \"color\": \"red\", \"value\": \"#f00\", \"code\": \"255\" }",
+        "{ \"data\": [{ \"id\": 1, \"name\": \"John\" }, { \"id\": 2, \"name\": \"Anna\" }] }",
+        "{ \"items\": [\"apple\", \"banana\", \"cherry\", \"date\"] }",
+        "{ \"settings\": { \"brightness\": 50, \"mode\": \"night\", \"volume\": null } }",
+        "{ \"user\": {\"name\": \"Alice\", \"age\": 25, \"email\": \"alice@example.com\"} }",
+        "[ { \"type\": \"fruit\", \"examples\": [\"apple\", \"banana\", \"cherry\"], \"available\": true } ]",
+        "{ \"id\": 123, \"name\": \"Widget\", \"price\": 19.99 }"
+    ]
+}

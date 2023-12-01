@@ -91,7 +91,7 @@ Answer:
 [
      {{
         "statement_1": "Albert Einstein was a genius.",
-        "reason": "The context and statement are unrelated"
+        "reason": "The context and statement are unrelated",
         "verdict": "No"
     }}
 ]
@@ -148,7 +148,7 @@ class Faithfulness(MetricWithLLM):
 
             prompts = []
             for context, output in zip(contexts, result.generations):
-                statements = load_as_json(output[0].text).get("statements", [])
+                statements = load_as_json(self.llm, output[0].text).get("statements", [])
                 statements = statements if statements != [] else ["Nil"]
                 statements_str: str = "\n".join(
                     [f"statement_{i+1}: {st}" for i, st in enumerate(statements)]
@@ -164,7 +164,7 @@ class Faithfulness(MetricWithLLM):
             verdict_score_map = {"yes": 1, "no": 0, "null": np.nan}
             scores = []
             for output in outputs:
-                output = load_as_json(output[0].text)
+                output = load_as_json(self.llm, output[0].text)
                 output = output if output else []
                 faithful_statements = sum(
                     verdict_score_map.get(dict.get("verdict", "").lower(), np.nan)

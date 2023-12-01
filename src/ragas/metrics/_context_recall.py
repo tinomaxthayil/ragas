@@ -114,7 +114,7 @@ class ContextRecall(MetricWithLLM):
             responses = [[i.text for i in r] for r in results.generations]
             scores = []
             for response in responses:
-                response = load_as_json(response[0])
+                response = load_as_json(self.llm, response[0])
                 if response:
                     denom = len(response)
                     numerator = sum(
